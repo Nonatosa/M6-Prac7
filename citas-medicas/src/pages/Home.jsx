@@ -1,8 +1,8 @@
 function Home() {
   return (
     <div className="container">
-      <h1>Bienvenido a la Plataforma de Citas Médicas</h1>
-      <p>Consulta y administra tus citas de forma fácil y rápida.</p>
+      <h2>Bienvenido a la Plataforma de Citas Médicas</h2>
+      <p>Gestiona tus citas de manera sencilla y eficiente.</p>
     </div>
   );
 }

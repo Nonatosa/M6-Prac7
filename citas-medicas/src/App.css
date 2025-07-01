@@ -1,77 +1,161 @@
-/* App.css */
-
+/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Fondo general oscuro suave */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2c2f33; /* gris oscuro suave */
-  color: #f0f0f0; /* texto claro */
+  background-color: #2c2f33;
+  color: #f0f0f0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-nav {
-  width: 100%;
-  background-color: #23272a;
-  padding: 1rem 2rem;
-  display: flex;
   justify-content: center;
-  gap: 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  padding: 2rem;
 }
 
-nav a {
-  color: #f0f0f0;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #7289da; /* azul suave Discord-style */
-}
-
+/* Contenedor centrado */
 .container {
-  width: 100%;
-  max-width: 700px;
-  margin-top: 2rem;
   background-color: #36393f;
   padding: 2rem;
   border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-h1, h2 {
+/* Títulos */
+.container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
   color: #ffffff;
-  margin-bottom: 1rem;
 }
 
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form select {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  background-color: #23272a;
+  color: #ffffff;
+}
+
+form input:focus {
+  outline: 2px solid #7289da;
+}
+
+/* Lista de citas */
 ul {
   list-style: none;
-  padding-left: 0;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 li {
-  margin-bottom: 0.8rem;
+  background-color: #23272a;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem; /* espacio entre info y botones */
 }
 
-li a {
+.cita-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 1rem;
+}
+
+.nombre {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.fecha {
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin-left: auto;
+  margin-top: 0.2rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ver {
+  background-color: #7289da;
+  color: #fff;
+}
+
+.ver:hover {
+  background-color: #5b6eae;
+}
+
+.editar {
+  background-color: #43b581;
+  color: #fff;
+}
+
+.editar:hover {
+  background-color: #369a6b;
+}
+
+.eliminar {
+  background-color: #f04747;
+  color: #fff;
+}
+
+.eliminar:hover {
+  background-color: #c73434;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+nav a {
   color: #7289da;
   text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
 }
 
-li a:hover {
-  text-decoration: underline;
-}
-
-p {
-  margin-top: 0.5rem;
-  line-height: 1.6;
+nav a:hover {
+  background-color: #40444b;
 }
